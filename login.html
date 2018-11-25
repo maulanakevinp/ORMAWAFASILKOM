@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ORGANISASI MAHASISWA FAKULTAS ILMU KOMPUTER</title>
+	<link rel="shortcut icon" href="images/logo unej.png">	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<img src ="images/logo unej.png" alt="logo unej" width="80px">
+		<h1 class="judul">ORGANISASI MAHASISWA FAKULTAS ILMU KOMPUTER</h1>
+		<h1 class="judul">UNIVERSITAS JEMBER</h1>
+	</header>
+	
+	<section id="bagian_login">
+		<div id="button_login" class="button">
+			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</div>		
+
+		<div id="id01" class="modal">
+
+			<form class="modal-content animate" action="admin.html">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+				</div>
+
+				<div class="container">
+					<label for="name"><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="name" required>
+
+					<label for="pass"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="pass" required>
+
+					<button type="submit" onclick="login()">Login</button>
+				</div>
+			</form>
+		</div>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById('id01');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+			function login(){
+				var name = (document.masuk.user.value);
+				var pass = (document.masuk.pass.value);
+
+				if (name == "admin" && pass == "admin1234") {
+					alert("selamat datang");				
+				} else {
+					alert("gagal masuk");
+				}
+			}
+		</script>
+	</section>
+
+	<div id="button_home" class="button">
+		<button onclick="window.location.href='beranda.html'" style="width:auto;">Beranda</button>
+	</div>		
+
+	<footer>
+		<p>&copy;Copyright 2018 FAKULTAS ILMU KOMPUTER All Rights Reserved.</p>			
+	</footer>
+</body>
+</html>

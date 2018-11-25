@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ORGANISASI MAHASISWA FAKULTAS ILMU KOMPUTER</title>
+	<link rel="shortcut icon" href="images/logo unej.png">	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<h4 style="color: white; text-align: left; position: absolute; top: 0;">admin</h4>
+		<img src ="images/logo unej.png" alt="logo unej" width="80px">
+		<h1 class="judul">ORGANISASI MAHASISWA FAKULTAS ILMU KOMPUTER</h1>
+		<h1 class="judul">UNIVERSITAS JEMBER</h1>
+	</header>
+
+	<section id="slideshow-ormawa">
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+				<a href="#" onclick="document.getElementById('bem').style.display='block'">
+					<img src="images/logo bem.png" alt="logo bem" height="250px">
+				</a>
+				<div class="text">
+					<h3>BEM FASILKOM</h3>
+				</div>
+			</div>
+
+			<div class="mySlides fade">
+				<a href="#" onclick="document.getElementById('himasif').style.display='block'">
+					<img src="images/logo himasif.png" alt="logo himasif" height="250px">
+				</a>
+
+				<div class="text">
+					<h3>HIMASIF</h3>
+				</div>
+			</div>
+
+			<div class="mySlides fade">
+				<a href="#" onclick="document.getElementById('binary').style.display='block'">
+					<img src="images/logo binary.png" alt="logo binary" height="250px">
+				</a>
+
+				<div class="text">
+					<h3>UKM-P BINARY</h3>
+				</div>
+			</div>
+
+			<div class="mySlides fade">
+				<a href="#" onclick="document.getElementById('laos').style.display='block'">
+					<img src="images/logo laos.png" alt="logo laos" height="250px">
+				</a>
+
+				<div class="text">
+					<h3>UKM LAOS</h3>
+				</div>
+			</div>
+
+			<div class="mySlides fade">
+				<a href="#" onclick="document.getElementById('macho').style.display='block'">
+					<img src="images/logo macho.png" alt="logo macho" height="250px">
+				</a>
+
+				<div class="text">
+					<h3>UKM-O MACHO</h3>
+				</div>
+			</div>
+
+			<div class="mySlides fade">
+				<a href="#" onclick="document.getElementById('etalase').style.display='block'">
+					<img src="images/logo etalase.png" alt="logo etalase" height="250px">
+				</a>
+
+				<div class="text">
+					<h3>UKMK ETALASE</h3>
+				</div>
+			</div>
+
+			<div class="mySlides fade">
+				<a href="#" onclick="document.getElementById('balwana').style.display='block'">
+					<img src="images/logo balwana.png" alt="logo balwana" height="250px">
+				</a>
+
+				<div class="text">
+					<h3>UKM BALWANA</h3>
+				</div>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 			
+			<span class="dot" onclick="currentSlide(4)"></span>  			
+			<span class="dot" onclick="currentSlide(5)"></span> 			
+			<span class="dot" onclick="currentSlide(6)"></span> 			
+			<span class="dot" onclick="currentSlide(7)"></span>
+		</div>
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {
+					slideIndex = 1
+				}    
+				if (n < 1) {
+					slideIndex = slides.length
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+		</script>
+	</section>
+	
+	<div id="button_logout" class="button">
+		<button onclick="window.location.href='login.html'" style="width:auto;">Logout</button>
+	</div>		
+
+	<section id="ormawa">
+		<div id="bem" class="ormawa animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('bem').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="ormawa-container">
+				<div class="nav_bar">
+					<ul>
+						<li>
+							<span onclick="openCity('profil-bem')">Profil</span>
+						</li>
+						<li>
+							<span onclick="openCity('visi-bem')">Visi & Misi</span>
+						</li>
+						<li>
+							<span onclick="openCity('tujuan-bem')">Tujuan</span>
+						</li>
+						<li>
+							<span onclick="openCity('agenda-bem')">Agenda</span>
+						</li>
+						<li>
+							<span onclick="openCity('pendaftaran-bem')">Form Pendaftaran</span>
+						</li>						
+					</ul>
+				</div>
+
+				<div id="profil-bem" class="city">
+					<h3>
+						Profil
+					</h3>
+					<br>
+					<p>
+						a
+					</p>
+				</div>
+
+				<div id="visi-bem" class="city" style = "display: none;">
+					<h3>
+						VISI
+					</h3>
+					<br>
+					<p>
+						"Tercapainya pendidikan yang kompeten terutama di bidang IPTEKS yang didasari tanggung jawab dan sikap profesionalisme serta menyatukan 3 potensi dasar kepemimpinan pemuda 
+						yaitu intelektual, spiritual, dan jasad sehingga menjadikan mahasiswa yang bertaqwa kepada Tuhan Yang Maha Esa."
+					</p>
+					<br>
+					<h3>
+						MISI
+					</h3>
+					<br>
+					<ol>
+						<li>
+							Mengadakan kegiatan kemahasiswaan yang bertujuan untuk mengembangkan IPTEKS
+						</li>
+						<li>
+							Meningkatkan kualitas sumberdaya manusia di bidang akademik dan non akademik
+						</li>
+						<li>
+							Memperkenalkan fakultas di lingkungan masyarakat luas
+						</li>
+						<li>
+							Menjalin hubungan dan kerjasama atas dasar kekeluargaan dengan organisasi di dalam atau di luar Fakultas
+						</li>
+						<li>
+							Melaksanakan setiap kegiatan dengan disiplin, konsisten, dan bertanggung jawab
+						</li>
+						<li>
+							Menyelenggarakan kegiatan sosial yang berasaskan Ketuhanan Yang Maha Esa
+						</li>
+						<li>
+							Mempererat tali persaudaraan antar mahasiswa khususnya mahasiswa Fakultas
+						</li>
+					</ol>
+					<br>
+					<P>
+						Visit link : <a href="http://bem.ilkom.unej.ac.id" target="_blank">http://bem.ilkom.unej.ac.id</a>
+					</P>
+				</div>
+
+				<div id="tujuan-bem" class="city" style = "display: none;">
+					<h3>
+						Tujuan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="agenda-bem" class="city" style = "display: none;">
+					<h3>
+						Agenda Kegiatan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="pendaftaran-bem" class="city" style = "display: none;">
+					<h3>
+						Formulir Pendaftaran
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+			</div>		
+		</div>
+
+		<div id="himasif" class="ormawa animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('himasif').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="ormawa-container">
+				<div class="nav_bar">
+					<ul>
+						<li>
+							<span onclick="openCity('profil-himasif')">Profil</span>
+						</li>
+						<li>
+							<span onclick="openCity('visi-himasif')">Visi & Misi</span>
+						</li>
+						<li>
+							<span onclick="openCity('tujuan-himasif')">Tujuan</span>
+						</li>
+						<li>
+							<span onclick="openCity('agenda-himasif')">Agenda</span>
+						</li>
+						<li>
+							<span onclick="openCity('pendaftaran-himasif')">Form Pendaftaran</span>
+						</li>						
+					</ul>
+				</div>
+
+				<div id="profil-himasif" class="city">
+					<h3>
+						Profil
+					</h3>
+					<br>
+					<p>
+						a
+					</p>
+				</div>
+
+				<div id="visi-himasif" class="city" style = "display: none;">
+					<h3>
+						VISI
+					</h3>
+					<br>
+					<p>
+						"Tercapainya pendidikan yang kompeten terutama dibidang IPTEK yang didasari tanggung jawab dan sikap profesionalisme serta menjadi sarana untuk mengambangkan potensi diri mahasiswa."
+					</p>
+					<br>
+					<h3>
+						MISI
+					</h3>
+					<br>
+					<ol>
+						<li>
+							Mengadakan kegiatan yang bertujuan untuk mengembangkan IPTEK
+						</li>
+						<li>
+							Meningkatkan kualitas sumberdaya manusia di bidang akademis, kewirausahaan,dan keprofesian
+						</li>
+						<li>
+							Memperkenalkan Program Studi Sistem Informasi di lingkungan masyarakat luas
+						</li>
+						<li>
+							Menjalin hubungan dan kerjasama atas dasar kekeluargaan dengan organisasi di dalam atau di luar Program Studi Sistem Informasi
+						</li>
+						<li>
+							Melaksanakan setiap kegiatan dengan berlandaskan kedisiplinan dan Kekonsistenan
+						</li>
+						<li>
+							Mempererat tali persaudaraan antar mahasiswa khususnya anggota HIMASIF
+						</li>
+					</ol>
+					<br>
+					<P>
+						Visit link : <a href="http://himasif.ilkom.unej.ac.id" target="_blank">http://himasif.ilkom.unej.ac.id</a>
+					</P>
+				</div>
+
+				<div id="tujuan-himasif" class="city" style = "display: none;">
+					<h3>
+						Tujuan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="agenda-himasif" class="city" style = "display: none;">
+					<h3>
+						Agenda Kegiatan
+					</h3>
+					<br>
+					<p>
+						HTC merupakan kepanjangan dari himasif training center yang merupakan media pembelajaran diluar perkuliahan. pembelajaran disini bertujuan agar penguasaan materi oleh para peserta yang mengikuti semakin bertambah. pemateri dari acara ini biasanya dihadirkan dari mahasiswa senior, serta kegiatan ini dilakukan setiap semester pada bulan tertentu.
+					</p>	
+					<br>
+					<p style= "text-align: center;">
+						<iframe src="https://www.youtube.com/embed/XuFgusR5A5c?rel=0" width="670" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+					</p>
+					<br>
+					<p>
+						ISC merupakan acara pertemuan antara kedua masing-masing himpunan yang bertujuan untuk saling bertukar informasi terkait himpunan yang lainnya. acara ini biasanya diselenggarakan disetiap periode pengurusan himpunan.
+					</p>
+					<br>
+					<p style= "text-align: center;">
+						<iframe src="https://www.youtube.com/embed/tZGpLX7M7RM?rel=0" width="670" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+					</p>
+
+				</div>
+
+				<div id="pendaftaran-himasif" class="city" style = "display: none;">
+					<h3>
+						Formulir Pendaftaran
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+			</div>		
+		</div>
+
+		<div id="binary" class="ormawa animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('binary').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="ormawa-container">
+				<div class="nav_bar">
+					<ul>
+						<li>
+							<span onclick="openCity('profil-binary')">Profil</span>
+						</li>
+						<li>
+							<span onclick="openCity('visi-binary')">Visi & Misi</span>
+						</li>
+						<li>
+							<span onclick="openCity('tujuan-binary')">Tujuan</span>
+						</li>
+						<li>
+							<span onclick="openCity('agenda-binary')">Agenda</span>
+						</li>
+						<li>
+							<span onclick="openCity('pendaftaran-binary')">Form Pendaftaran</span>
+						</li>						
+					</ul>
+				</div>
+
+				<div id="profil-binary" class="city">
+					<h3>
+						Profil
+					</h3>
+					<br>
+					<p>
+						a
+					</p>
+				</div>
+
+				<div id="visi-binary" class="city" style = "display: none;">
+					<h3>
+						VISI
+					</h3>
+					<br>
+					<p>
+						"Mewujudkan budaya demokratis mahasiswa di lingkungan sosial dan kampus"
+					</p>
+					<br>
+					<h3>
+						MISI
+					</h3>
+					<br>
+					<ol>
+						<li>
+							Menumbuhkan budaya kritis dan berwacana.
+						</li>
+						<li>
+							Mengembangkan minat mahasiswa Program Studi Sistem Informasi untuk berkarya dalam bidang jurnalistik dan desain grafis.
+						</li>
+						<li>
+							Menciptakan jurnalis-jurnalis yang berkompeten dan independen.
+						</li>					
+					</ol>
+					<br>
+					<P>
+						Visit link : <a href="http://binaryupdate.org" target="_blank">http://binaryupdate.org</a>
+					</P>
+				</div>
+
+				<div id="tujuan-binary" class="city" style = "display: none;">
+					<h3>
+						Tujuan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="agenda-binary" class="city" style = "display: none;">
+					<h3>
+						Agenda Kegiatan
+					</h3>
+					<br>
+					<p>a
+					</p>			
+				</div>
+
+				<div id="pendaftaran-binary" class="city" style = "display: none;">
+					<h3>
+						Formulir Pendaftaran
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+			</div>		
+		</div>
+
+		<div id="laos" class="ormawa animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('laos').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="ormawa-container">
+				<div class="nav_bar">
+					<ul>
+						<li>
+							<span onclick="openCity('profil-laos')">Profil</span>
+						</li>
+						<li>
+							<span onclick="openCity('visi-laos')">Visi & Misi</span>
+						</li>
+						<li>
+							<span onclick="openCity('tujuan-laos')">Tujuan</span>
+						</li>
+						<li>
+							<span onclick="openCity('agenda-laos')">Agenda</span>
+						</li>
+						<li>
+							<span onclick="openCity('pendaftaran-laos')">Form Pendaftaran</span>
+						</li>						
+					</ul>
+				</div>
+
+				<div id="profil-laos" class="city">
+					<h3>
+						PROFIL
+					</h3>
+					<br>
+					<p>
+						Ukm laos merupakan wadah mahasiswa pssi yang tertarim kepada dunia sistem operasi open source terutama linux. UKM Laos adalah ukm yang menjadi tempat berkumpulnya para pecinta linux maupun 
+						orang yang ingin mengerti lebih tentang mata kuliah pemrograman yang ada di PSSI. UKM ini pertama kali didirikan oleh Pak diksi yang sekarang menjadi salah satu dosen di PSSI.
+					</p>
+					<br>
+					<P>
+						Di dalam UKM LAOS terdapat pertemuan rutin setiap hari selasa malam dan jumat malam yang akan diisi oleh divisi yang ada di UKM LAOS. Divisi itu yaitu sistem operasi,jaringan,multimedia, 
+						dan pemrograman yang masing masing divisi diberi waktu 2x pertemuan an untuk menyampaikan materi mengenai divisi yang dikelola kepada anggota UKM laos lainnya. Tidak hanya pertemuan rutin, 
+						UKM LAOS juga memiliki beberapa kegiatan lainnya seperti Release Party, Launching LAOS, Pelatihan Linux, Pelatihan manajemen jaringan, dan masih banyak lainnya.
+					</P>
+					<br>
+					<P>
+						Visit link : <a href="http://laos.ilkom.unej.ac.id" target="_blank">http://laos.ilkom.unej.ac.id</a>
+					</P>
+				</div>
+
+				<div id="visi-laos" class="city" style = "display: none;">
+					<h3>
+						VISI
+					</h3>
+					<br>
+					<p>
+						a
+					</p>
+					<br>
+					<h3>
+						MISI
+					</h3>
+					<br>
+					<ol>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+					</ol>
+				</div>
+
+				<div id="tujuan-laos" class="city" style = "display: none;">
+					<h3>
+						Tujuan
+					</h3>
+					<br>
+					<p>
+
+					</p>			
+				</div>
+
+				<div id="agenda-laos" class="city" style = "display: none;">
+					<h3>
+						Agenda Kegiatan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="pendaftaran-laos" class="city" style = "display: none;">
+					<h3>
+						Formulir Pendaftaran
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+			</div>		
+		</div>
+
+		<div id="macho" class="ormawa animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('macho').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="ormawa-container">
+				<div class="nav_bar">
+					<ul>
+						<li>
+							<span onclick="openCity('profil-macho')">Profil</span>
+						</li>
+						<li>
+							<span onclick="openCity('visi-macho')">Visi & Misi</span>
+						</li>
+						<li>
+							<span onclick="openCity('tujuan-macho')">Tujuan</span>
+						</li>
+						<li>
+							<span onclick="openCity('agenda-macho')">Agenda</span>
+						</li>
+						<li>
+							<span onclick="openCity('pendaftaran-macho')">Form Pendaftaran</span>
+						</li>						
+					</ul>
+				</div>
+
+				<div id="profil-macho" class="city">
+					<h3>
+						PROFIL
+					</h3>
+					<br>
+					<p>
+						UKM-O Macho adalah ukm yang bergerak dibidang olahraga. Ukm ini memiliki 5 bidang olahraga yaitu Sepak Bola, Futsal, Basket, Volly, Badminton.
+						UKM-O Macho pertama kali cabang olahraganya cuma futsal namanya SIFUT dibentuk tahun 2009 sama pak beni. Juli tahun 2011 baru diresmikan UKMO, cabangnya ada basket futsal badminton.
+					</p>
+					<br>
+					<P>
+						Tahun2 selanjutnya cabornya nambah terus dan smpek skrg ada 6 cabor (Futsal, basket, badminton, tenis meja, voli, sepakbola) tp untuk tahun ini sepak bola masih fakum. 
+						1Nama UKMO MACO diresmikan tgl 22 april 2016 pas kepengurusan mas bagus akbar . Macho singkatan dari men sana in corpore sano yang artinya di dalam tubuh yg kuat terdapat jiwa yg sehat.
+					</P>
+				</div>
+
+				<div id="visi-macho" class="city" style = "display: none;">
+					<h3>
+						VISI
+					</h3>
+					<br>
+					<p>
+						a
+					</p>
+					<br>
+					<h3>
+						MISI
+					</h3>
+					<br>
+					<ol>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+					</ol>
+				</div>
+
+				<div id="tujuan-macho" class="city" style = "display: none;">
+					<h3>
+						Tujuan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="agenda-macho" class="city" style = "display: none;">
+					<h3>
+						Agenda Kegiatan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="pendaftaran-macho" class="city" style = "display: none;">
+					<h3>
+						Formulir Pendaftaran
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+			</div>		
+		</div>
+
+		<div id="etalase" class="ormawa animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('etalase').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="ormawa-container">
+				<div class="nav_bar">
+					<ul>
+						<li>
+							<span onclick="openCity('profil-etalase')">Profil</span>
+						</li>
+						<li>
+							<span onclick="openCity('visi-etalase')">Visi & Misi</span>
+						</li>
+						<li>
+							<span onclick="openCity('tujuan-etalase')">Tujuan</span>
+						</li>
+						<li>
+							<span onclick="openCity('agenda-etalase')">Agenda</span>
+						</li>
+						<li>
+							<span onclick="openCity('pendaftaran-etalase')">Form Pendaftaran</span>
+						</li>						
+					</ul>
+				</div>
+
+				<div id="profil-etalase" class="city">
+					<h3>
+						PROFIL
+					</h3>
+					<br>
+					<p>
+						UKM – KESENIAN ETALASE adalah Unit Kegiatan Mahasiswa yang berfungsi sebagai wadah pengembangan kegiatan ekstrakulikuler di yang bersifat penalaran, bakat dan minat di bidang kesenian serta organisasi. UKM – K ETALASE didirikan di Fasilkom dan disahkan pada 19 Desember 2014 yang diketuai oleh Yosafat Parulian Devinaldo. UKM – K ETALASE bersifat mandiri, serius dan menghargai serta menjunjung tinggi semangat kebersamaan antar anggota. Dengan adanya UKM – K ETALASE, mahasiswa mampu mengembangkan bakat dan minat kesenian dan organisasi untuk mejadi manusia yang aktif, peduli setta menjunjung tinggi nilai – nilai budaya yang terus berkembang dengan etika dan sudut pandang yang positif dan luas.
+					</p>
+					<br>
+					<P>
+						UKM – K ETALASE pada awalnya menaungi 4 bidang kesenian, yaitu Musik, PSM, Tari dan Fotografi. Kemudian, pada periode kepengurusan 2015 – 2016, 
+						bidang Teater mengisi sebagai bidang baru di UKM – K ETALASE. Dengan adanya bidang – bidang yang dinaungi UKM – K ETALASE, Anggota UKM – K ETALASE telah berhasil melaksanakan pementasan diantaranya Aplikasi untuk Anggota Muda dan Eksen (Pekan Seni) yang merupakan wadah proses seluruh anggota UKM – K ETALASE.
+					</P>
+				</div>
+
+				<div id="visi-etalase" class="city" style = "display: none;">
+					<h3>
+						VISI
+					</h3>
+					<br>
+					<p>
+						a
+					</p>
+					<br>
+					<h3>
+						MISI
+					</h3>
+					<br>
+					<ol>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+						<li>
+							a
+						</li>
+					</ol>
+				</div>
+
+				<div id="tujuan-etalase" class="city" style = "display: none;">
+					<h3>
+						Tujuan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="agenda-etalase" class="city" style = "display: none;">
+					<h3>
+						Agenda Kegiatan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="pendaftaran-etalase" class="city" style = "display: none;">
+					<h3>
+						Formulir Pendaftaran
+					</h3>
+					<br>
+					<p>
+						<form name ="pendaftaran_CA_ETALASE" >
+
+							Nama : <br>
+							<input type="text" name="nama" placeholder="Nama Lengkap" ">
+							<br>
+							Tempat, Tanggal Lahir : <br>
+							<input type="text" name="tempatLahir" placeholder="kota"  style="width: 200px;">
+							<input type="date" name="tanggalLahir">
+							<br>
+							Alamat saat ini : <br>
+							<textarea placeholder="tempat tinggal sekarang" cols="80" name="alamat"></textarea>
+							<br>
+							No Hp : <br>
+							<input type="text" name="noHp" placeholder="nomor yang dapat dihubungi"  style="width: 200px;">
+							<br>
+							Kost/Tidak Kost? <br>
+							<input type="radio" name="kost" value="kost">Kost 
+							<input type="radio" name="kost" value="tidakKost">Tidak Kost
+							<br>
+							Bidang : <br>							
+							<input type="checkbox" name="bidang" value="PSM">PSM 
+							<input type="checkbox" name="bidang" value="Musik">Musik 
+							<input type="checkbox" name="bidang" value="Tari">Tari 
+							<input type="checkbox" name="bidang" value="Fotografi">Fotografi 
+							<input type="checkbox" name="bidang" value="Teater">Teater 
+							<br>
+							Apa motivasi anda masuk UKMK ETALASE Apakah anda hanya ingin masuk UKMK ETALASE saja? Jika tidak, organisasi apa yang telah anda ikuti sekarang :<br>
+							<textarea cols="80" name="motivasi"></textarea>
+							<br>
+							Pengalaman apa yang pernah anda lakukan dibidang organisasi maupun bidang kesenian?<br>
+							<textarea cols="80" name="pengalaman"></textarea><br>
+							Seandainya anda masuk UKMK ETALASE, bisakah anda berjanji akantetap berproses dalamorganisasi & kesenian?<br>
+							<textarea cols="80" name="perjanjian"></textarea><br>
+							penyakit apa saja yang pernah anda derita?<br>
+							<textarea cols="80" name="penyakit"></textarea><br>		
+
+							<input type="button" onclick="alert('DATA BERHASIL DISIMPAN')" value="simpan" name="simpan" style="width: 20%; padding: 5px;">
+							<input type="reset" name="reset" value="reset">		
+						</form>		
+					</p>			
+				</div>
+			</div>		
+		</div>
+
+		<div id="balwana" class="ormawa animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('balwana').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="ormawa-container">
+				<div class="nav_bar">
+					<ul>
+						<li>
+							<span onclick="openCity('profil-balwana')">Profil</span>
+						</li>
+						<li>
+							<span onclick="openCity('visi-balwana')">Visi & Misi</span>
+						</li>
+						<li>
+							<span onclick="openCity('tujuan-balwana')">Tujuan</span>
+						</li>
+						<li>
+							<span onclick="openCity('agenda-balwana')">Agenda</span>
+						</li>
+						<li>
+							<span onclick="openCity('pendaftaran-balwana')">Form Pendaftaran</span>
+						</li>						
+					</ul>
+				</div>
+
+				<div id="profil-balwana" class="city">
+					<h3>
+						Profil
+					</h3>
+					<br>
+					<p>
+						a
+					</p>
+				</div>
+
+				<div id="visi-balwana" class="city" style = "display: none;">
+					<h3>
+						VISI
+					</h3>
+					<br>
+					<p>
+						"Membentuk pribadi anggota yang tanggap akan kelestarian alam dan lingkungan, memiliki rasa persaudaraan dan loyalitas yang tinggi dalam berorganisasi, serta bersedia mengabdi kepada Tuhan, bangsa, dan tanah air."
+					</p>
+					<br>
+					<h3>
+						MISI
+					</h3>
+					<br>
+					<ol>
+						<li>
+							Menyelenggarakan kegiatan yang mendukung terciptanya kelestarian alam.
+						</li>
+						<li>
+							Berperan aktif dalam berbagai kegiatan pengabdian masyarakat.
+						</li>
+						<li>
+							Menjalin dan mempererat tali persaudaraan antar sesama pecinta alam di Indonesia.
+						</li>
+						<li>
+							Menjunjung tinggi loyalitas terhadap organisasi.
+						</li>					
+					</ol>
+				</div>
+
+				<div id="tujuan-balwana" class="city" style = "display: none;">
+					<h3>
+						Tujuan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="agenda-balwana" class="city" style = "display: none;">
+					<h3>
+						Agenda Kegiatan
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+
+				<div id="pendaftaran-balwana" class="city" style = "display: none;">
+					<h3>
+						Formulir Pendaftaran
+					</h3>
+					<br>
+					<p>
+						a
+					</p>			
+				</div>
+			</div>		
+		</div>
+
+		<script>
+			function openCity(cityName) {
+				var i;
+				var x = document.getElementsByClassName("city");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				document.getElementById(cityName).style.display = "block";  
+			}
+		</script>
+	</section>
+
+	<footer>
+		<p>&copy;Copyright 2018 FAKULTAS ILMU KOMPUTER All Rights Reserved.</p>			
+	</footer>
+</body>
+</html>
