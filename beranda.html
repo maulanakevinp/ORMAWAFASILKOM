@@ -143,24 +143,13 @@
 				<span onclick="document.getElementById('bem').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-bem')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-bem')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-bem')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-bem')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-bem')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-bem" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-bem')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-bem')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-bem')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-bem')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-bem')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-bem')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-bem" class="city">
@@ -265,7 +254,65 @@
 							<label for="tempatLahir">Tempat Lahir :</label>
 							<input type="text" name="tempatLahir" placeholder="kota">
 							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
+							<select name="tanggalLahir">
+								<option value="">Pilih</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="bulanLahir">
+								<option value="">Pilih</option>
+								<option value="Januari">Januari</option>
+								<option value="Februari">Februari</option>
+								<option value="Maret">Maret</option>
+								<option value="April">April</option>
+								<option value="Mei">Mei</option>
+								<option value="Juni">Juni</option>
+								<option value="Juli">Juli</option>
+								<option value="Agustus">Agustus</option>
+								<option value="September">September</option>
+								<option value="Oktober">Oktober</option>
+								<option value="November">November</option>
+								<option value="Desember">Desember</option>
+							</select>
+							<select name="tahunLahir">
+								<option value="">Pilih</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+							</select><br>
 							<label for="alamat">Alamat saat ini :</label> 
 							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
 							<label for="noHp">No Hp :</label> 
@@ -280,11 +327,11 @@
 							<textarea name="pengalaman"></textarea>
 							<label for="perjanjian">Seandainya anda masuk BEM, bisakah anda berjanji akan tetap berproses dalam organisasi?</label>
 							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
+							<label for="penyakit">Penyakit apa saja yang pernah anda derita?</label>
 							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
+							<button type="submit" onclick="daftar(this.form)">SIMPAN</button>
 						</form>		
-					</p>			
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -294,24 +341,13 @@
 				<span onclick="document.getElementById('himasif').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-himasif')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-himasif')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-himasif')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-himasif')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-himasif')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-himasif" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-himasif')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-himasif')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-himasif')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-himasif')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-himasif')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-himasif')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-himasif" class="city">
@@ -384,7 +420,7 @@
 					</p>	
 					<br>
 					<p style= "text-align: center;">
-						<iframe src="https://www.youtube.com/embed/XuFgusR5A5c?rel=0" width="80%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+						<iframe src="https://www.youtube.com/embed/XuFgusR5A5c?rel=0" width="90%" height="500px" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 					</p>
 					<br>
 					<p>
@@ -392,9 +428,8 @@
 					</p>
 					<br>
 					<p style= "text-align: center;">
-						<iframe src="https://www.youtube.com/embed/tZGpLX7M7RM?rel=0" width="80%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+						<iframe src="https://www.youtube.com/embed/tZGpLX7M7RM?rel=0" width="90%" height="500px" frameborder frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 					</p>
-
 				</div>
 
 				<div id="pendaftaran-himasif" class="city" style = "display: none;">
@@ -410,7 +445,65 @@
 							<label for="tempatLahir">Tempat Lahir :</label>
 							<input type="text" name="tempatLahir" placeholder="kota">
 							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
+							<select name="tanggalLahir">
+								<option value="">Pilih</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="bulanLahir">
+								<option value="">Pilih</option>
+								<option value="Januari">Januari</option>
+								<option value="Februari">Februari</option>
+								<option value="Maret">Maret</option>
+								<option value="April">April</option>
+								<option value="Mei">Mei</option>
+								<option value="Juni">Juni</option>
+								<option value="Juli">Juli</option>
+								<option value="Agustus">Agustus</option>
+								<option value="September">September</option>
+								<option value="Oktober">Oktober</option>
+								<option value="November">November</option>
+								<option value="Desember">Desember</option>
+							</select>
+							<select name="tahunLahir">
+								<option value="">Pilih</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+							</select><br>
 							<label for="alamat">Alamat saat ini :</label> 
 							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
 							<label for="noHp">No Hp :</label> 
@@ -425,11 +518,11 @@
 							<textarea name="pengalaman"></textarea>
 							<label for="perjanjian">Seandainya anda masuk HIMASIF, bisakah anda berjanji akan tetap berproses dalam organisasi?</label>
 							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
+							<label for="penyakit">Penyakit apa saja yang pernah anda derita?</label>
 							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
+							<button type="submit" onclick="daftar(this.form)">SIMPAN</button>
 						</form>		
-					</p>			
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -439,24 +532,13 @@
 				<span onclick="document.getElementById('binary').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-binary')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-binary')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-binary')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-binary')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-binary')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-binary" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-binary')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-binary')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-binary')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-binary')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-binary')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-binary')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-binary" class="city">
@@ -597,7 +679,65 @@
 							<label for="tempatLahir">Tempat Lahir :</label>
 							<input type="text" name="tempatLahir" placeholder="kota">
 							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
+							<select name="tanggalLahir">
+								<option value="">Pilih</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="bulanLahir">
+								<option value="">Pilih</option>
+								<option value="Januari">Januari</option>
+								<option value="Februari">Februari</option>
+								<option value="Maret">Maret</option>
+								<option value="April">April</option>
+								<option value="Mei">Mei</option>
+								<option value="Juni">Juni</option>
+								<option value="Juli">Juli</option>
+								<option value="Agustus">Agustus</option>
+								<option value="September">September</option>
+								<option value="Oktober">Oktober</option>
+								<option value="November">November</option>
+								<option value="Desember">Desember</option>
+							</select>
+							<select name="tahunLahir">
+								<option value="">Pilih</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+							</select><br>
 							<label for="alamat">Alamat saat ini :</label> 
 							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
 							<label for="noHp">No Hp :</label> 
@@ -612,11 +752,11 @@
 							<textarea name="pengalaman"></textarea>
 							<label for="perjanjian">Seandainya anda masuk UKM-P BINARY, bisakah anda berjanji akan tetap berproses dalam organisasi dan bidang jurnalis?</label>
 							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
+							<label for="penyakit">Penyakit apa saja yang pernah anda derita?</label>
 							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
+							<button type="submit" onclick="daftar(this.form)">SIMPAN</button>
 						</form>		
-					</p>			
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -626,24 +766,13 @@
 				<span onclick="document.getElementById('laos').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-laos')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-laos')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-laos')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-laos')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-laos')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-laos" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-laos')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-laos')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-laos')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-laos')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-laos')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-laos')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-laos" class="city">
@@ -736,7 +865,65 @@
 							<label for="tempatLahir">Tempat Lahir :</label>
 							<input type="text" name="tempatLahir" placeholder="kota">
 							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
+							<select name="tanggalLahir">
+								<option value="">Pilih</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="bulanLahir">
+								<option value="">Pilih</option>
+								<option value="Januari">Januari</option>
+								<option value="Februari">Februari</option>
+								<option value="Maret">Maret</option>
+								<option value="April">April</option>
+								<option value="Mei">Mei</option>
+								<option value="Juni">Juni</option>
+								<option value="Juli">Juli</option>
+								<option value="Agustus">Agustus</option>
+								<option value="September">September</option>
+								<option value="Oktober">Oktober</option>
+								<option value="November">November</option>
+								<option value="Desember">Desember</option>
+							</select>
+							<select name="tahunLahir">
+								<option value="">Pilih</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+							</select><br>
 							<label for="alamat">Alamat saat ini :</label> 
 							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
 							<label for="noHp">No Hp :</label> 
@@ -751,11 +938,11 @@
 							<textarea name="pengalaman"></textarea>
 							<label for="perjanjian">Seandainya anda masuk UKM LAOS, bisakah anda berjanji akan tetap berproses dalam organisasi dan bidang pemrograman linux?</label>
 							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
+							<label for="penyakit">Penyakit apa saja yang pernah anda derita?</label>
 							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
+							<button type="submit" onclick="daftar(this.form)">SIMPAN</button>
 						</form>		
-					</p>			
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -765,24 +952,13 @@
 				<span onclick="document.getElementById('macho').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-macho')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-macho')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-macho')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-macho')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-macho')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-macho" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-macho')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-macho')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-macho')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-macho')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-macho')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-macho')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-macho" class="city">
@@ -870,7 +1046,65 @@
 							<label for="tempatLahir">Tempat Lahir :</label>
 							<input type="text" name="tempatLahir" placeholder="kota">
 							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
+							<select name="tanggalLahir">
+								<option value="">Pilih</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="bulanLahir">
+								<option value="">Pilih</option>
+								<option value="Januari">Januari</option>
+								<option value="Februari">Februari</option>
+								<option value="Maret">Maret</option>
+								<option value="April">April</option>
+								<option value="Mei">Mei</option>
+								<option value="Juni">Juni</option>
+								<option value="Juli">Juli</option>
+								<option value="Agustus">Agustus</option>
+								<option value="September">September</option>
+								<option value="Oktober">Oktober</option>
+								<option value="November">November</option>
+								<option value="Desember">Desember</option>
+							</select>
+							<select name="tahunLahir">
+								<option value="">Pilih</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+							</select><br>
 							<label for="alamat">Alamat saat ini :</label> 
 							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
 							<label for="noHp">No Hp :</label> 
@@ -885,11 +1119,11 @@
 							<textarea name="pengalaman"></textarea>
 							<label for="perjanjian">Seandainya anda masuk UKM-O MACHO, bisakah anda berjanji akan tetap berproses dalam organisasi dan bidang olahraga?</label>
 							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
+							<label for="penyakit">Penyakit apa saja yang pernah anda derita?</label>
 							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
+							<button type="submit" onclick="daftar(this.form)">SIMPAN</button>
 						</form>		
-					</p>			
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -899,24 +1133,13 @@
 				<span onclick="document.getElementById('etalase').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-etalase')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-etalase')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-etalase')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-etalase')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-etalase')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-etalase" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-etalase')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-etalase')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-etalase')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-etalase')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-etalase')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-etalase')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-etalase" class="city">
@@ -1003,7 +1226,65 @@
 							<label for="tempatLahir">Tempat Lahir :</label>
 							<input type="text" name="tempatLahir" placeholder="kota">
 							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
+							<select name="tanggalLahir">
+								<option value="">Pilih</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="bulanLahir">
+								<option value="">Pilih</option>
+								<option value="Januari">Januari</option>
+								<option value="Februari">Februari</option>
+								<option value="Maret">Maret</option>
+								<option value="April">April</option>
+								<option value="Mei">Mei</option>
+								<option value="Juni">Juni</option>
+								<option value="Juli">Juli</option>
+								<option value="Agustus">Agustus</option>
+								<option value="September">September</option>
+								<option value="Oktober">Oktober</option>
+								<option value="November">November</option>
+								<option value="Desember">Desember</option>
+							</select>
+							<select name="tahunLahir">
+								<option value="">Pilih</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+							</select><br>
 							<label for="alamat">Alamat saat ini :</label> 
 							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
 							<label for="noHp">No Hp :</label> 
@@ -1025,11 +1306,11 @@
 							<textarea name="pengalaman"></textarea>
 							<label for="perjanjian">Seandainya anda masuk UKMK ETALASE, bisakah anda berjanji akan tetap berproses dalam organisasi & kesenian?</label>
 							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
+							<label for="penyakit">Penyakit apa saja yang pernah anda derita?</label>
 							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
+							<button type="submit" onclick="daftar(this.form)">SIMPAN</button>
 						</form>		
-					</p>			
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -1039,24 +1320,13 @@
 				<span onclick="document.getElementById('balwana').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-balwana')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-balwana')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-balwana')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-balwana')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-balwana')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-balwana" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-balwana')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-balwana')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-balwana')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-balwana')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-balwana')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-balwana')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-balwana" class="city">
@@ -1125,17 +1395,74 @@
 					<br>
 					<p>
 						<form name ="pendaftaran-ca-balwana" >
-
 							<label for="nama">Nama : </label>
-							<input type="text" name="nama" placeholder="Nama Lengkap">
+							<input type="text" name="nama" placeholder="Nama Lengkap" required>
 							<label for="tempatLahir">Tempat Lahir :</label>
-							<input type="text" name="tempatLahir" placeholder="kota">
+							<input type="text" name="tempatLahir" placeholder="kota" required>
 							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
+							<select name="tanggalLahir">
+								<option value="">Pilih</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<select name="bulanLahir">
+								<option value="">Pilih</option>
+								<option value="Januari">Januari</option>
+								<option value="Februari">Februari</option>
+								<option value="Maret">Maret</option>
+								<option value="April">April</option>
+								<option value="Mei">Mei</option>
+								<option value="Juni">Juni</option>
+								<option value="Juli">Juli</option>
+								<option value="Agustus">Agustus</option>
+								<option value="September">September</option>
+								<option value="Oktober">Oktober</option>
+								<option value="November">November</option>
+								<option value="Desember">Desember</option>
+							</select>
+							<select name="tahunLahir">
+								<option value="">Pilih</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+							</select><br>
 							<label for="alamat">Alamat saat ini :</label> 
-							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
+							<textarea placeholder="tempat tinggal sekarang"name="alamat" ></textarea>
 							<label for="noHp">No Hp :</label> 
-							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi">
+							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi" required>
 							<label for="kost">Kost/Tidak Kost?</label>	<br>			
 							<input type="radio" name="kost" value="kost">Kost <br>
 							<input type="radio" name="kost" value="tidakKost">Tidak Kost
@@ -1146,15 +1473,15 @@
 							<textarea name="pengalaman"></textarea>
 							<label for="perjanjian">Seandainya anda masuk UKM BALWANA, bisakah anda berjanji akan tetap berproses dalam organisasi dan bidang pecinta alam</label>
 							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
+							<label for="penyakit">Penyakit apa saja yang pernah anda derita?</label>
 							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
+							<button type="submit" onclick="daftar(this.form)">SIMPAN</button>
 						</form>		
-					</p>			
-				</div>
-			</div>		
+					</p>
+				</div>		
+			</div>			
 		</div>
-
+		
 		<script>
 			function openCity(cityName) {
 				var i;
@@ -1163,6 +1490,23 @@
 					x[i].style.display = "none";  
 				}
 				document.getElementById(cityName).style.display = "block";  
+			}
+
+			function menu(namaMenu) {
+				var x = document.getElementById(namaMenu);
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+
+			function daftar(form){
+				if (form.nama.value == "" || form.tempatLahir.value == "" || form.tanggalLahir.value == "" || form.bulanLahir.value == "" || form.tahunlLahir.value == "" || form.kost.value == "" || form.alamat.value == "" || form.noHp.value == "" || form.motivasi.value == "" || form.pengalaman.value == "" || form.perjanjian.value == "" || form.penyakit.value == "") {
+					alert("Formulir harus terisi dengan lengkap");
+				} else {
+					alert("Data Berhasil Disimpan");
+				}
 			}
 		</script>
 	</section>

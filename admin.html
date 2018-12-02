@@ -8,8 +8,7 @@
 </head>
 <body>
 	<header>
-		<h4 style="color: white; text-align: left; position: absolute; top: 0;">admin</h4>
-		<img src ="images/logo unej.png" alt="logo unej" width="80px">
+		<img id="logo_unej" src ="images/logo unej.png" alt="logo unej" width="80px">
 		<h1 class="judul">ORGANISASI MAHASISWA FAKULTAS ILMU KOMPUTER</h1>
 		<h1 class="judul">UNIVERSITAS JEMBER</h1>
 	</header>
@@ -19,7 +18,7 @@
 
 			<div class="mySlides fade">
 				<a href="#" onclick="document.getElementById('bem').style.display='block'">
-					<img src="images/logo bem.png" alt="logo bem" height="250px">
+					<img class="logo_ormawa" src="images/logo bem.png" alt="logo bem" height="250px">
 				</a>
 				<div class="text">
 					<h3>BEM FASILKOM</h3>
@@ -28,7 +27,7 @@
 
 			<div class="mySlides fade">
 				<a href="#" onclick="document.getElementById('himasif').style.display='block'">
-					<img src="images/logo himasif.png" alt="logo himasif" height="250px">
+					<img class="logo_ormawa" src="images/logo himasif.png" alt="logo himasif" height="250px">
 				</a>
 
 				<div class="text">
@@ -38,7 +37,7 @@
 
 			<div class="mySlides fade">
 				<a href="#" onclick="document.getElementById('binary').style.display='block'">
-					<img src="images/logo binary.png" alt="logo binary" height="250px">
+					<img class="logo_ormawa" src="images/logo binary.png" alt="logo binary" height="250px">
 				</a>
 
 				<div class="text">
@@ -48,7 +47,7 @@
 
 			<div class="mySlides fade">
 				<a href="#" onclick="document.getElementById('laos').style.display='block'">
-					<img src="images/logo laos.png" alt="logo laos" height="250px">
+					<img class="logo_ormawa" src="images/logo laos.png" alt="logo laos" height="250px">
 				</a>
 
 				<div class="text">
@@ -58,7 +57,7 @@
 
 			<div class="mySlides fade">
 				<a href="#" onclick="document.getElementById('macho').style.display='block'">
-					<img src="images/logo macho.png" alt="logo macho" height="250px">
+					<img class="logo_ormawa" src="images/logo macho.png" alt="logo macho" height="250px">
 				</a>
 
 				<div class="text">
@@ -68,7 +67,7 @@
 
 			<div class="mySlides fade">
 				<a href="#" onclick="document.getElementById('etalase').style.display='block'">
-					<img src="images/logo etalase.png" alt="logo etalase" height="250px">
+					<img class="logo_ormawa" src="images/logo etalase.png" alt="logo etalase" height="250px">
 				</a>
 
 				<div class="text">
@@ -78,7 +77,7 @@
 
 			<div class="mySlides fade">
 				<a href="#" onclick="document.getElementById('balwana').style.display='block'">
-					<img src="images/logo balwana.png" alt="logo balwana" height="250px">
+					<img class="logo_ormawa" src="images/logo balwana.png" alt="logo balwana" height="250px">
 				</a>
 
 				<div class="text">
@@ -136,7 +135,7 @@
 				dots[slideIndex-1].className += " active";
 			}
 		</script>
-	</section>
+	</section>	
 	
 	<div id="button_logout" class="button">
 		<button onclick="window.location.href='login.html'" style="width:auto;">Logout</button>
@@ -148,24 +147,13 @@
 				<span onclick="document.getElementById('bem').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-bem')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-bem')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-bem')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-bem')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-bem')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-bem" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-bem')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-bem')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-bem')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-bem')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-bem')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-bem')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-bem" class="city">
@@ -198,6 +186,50 @@
 					<P>
 						<a href="http://bem.ilkom.unej.ac.id" target="_blank">Visit link</a>
 					</P>
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-bem-profil').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-bem-profil').style.display='block'">Tambah</button>
+
+						<div id="edit-bem-profil" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-bem-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-bem-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-bem-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-bem-profil" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-bem-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-bem-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-bem-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
+
 				</div>
 
 				<div id="visi-bem" class="city" style = "display: none;">
@@ -234,6 +266,48 @@
 						</li>
 					</ol>
 					<br>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-bem-visi').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-bem-visi').style.display='block'">Tambah</button>
+
+						<div id="edit-bem-visi" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-bem-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-bem-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-bem-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-bem-visi" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-bem-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-bem-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-bem-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="tujuan-bem" class="city" style = "display: none;">
@@ -245,6 +319,48 @@
 						Tercapainya pendidikan yang kompeten terutama di bidang IPTEKS yang didasari tanggung jawab dan sikap profesionalisme serta menyatukan 3 potensi dasar kepemimpinan pemuda 
 						yaitu intelektual, spiritual, dan jasad sehingga menjadikan mahasiswa yang bertaqwa kepada Tuhan Yang Maha Esa.
 					</p>			
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-bem-tujuan').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-bem-tujuan').style.display='block'">Tambah</button>
+
+						<div id="edit-bem-tujuan" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-bem-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-bem-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-bem-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-bem-tujuan" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-bem-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-bem-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-bem-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>
 				</div>
 
 				<div id="agenda-bem" class="city" style = "display: none;">
@@ -253,8 +369,51 @@
 					</h3>
 					<br>
 					<p>
-						
+
 					</p>			
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-bem-agenda').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-bem-agenda').style.display='block'">Tambah</button>
+
+						<div id="edit-bem-agenda" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-bem-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-bem-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-bem-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-bem-agenda" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-bem-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-bem-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-bem-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>
 				</div>
 
 				<div id="pendaftaran-bem" class="city" style = "display: none;">
@@ -263,33 +422,28 @@
 					</h3>
 					<br>
 					<p>
-						<form name ="pendaftaran-ca-bem" >
-
-							<label for="nama">Nama : </label>
-							<input type="text" name="nama" placeholder="Nama Lengkap">
-							<label for="tempatLahir">Tempat Lahir :</label>
-							<input type="text" name="tempatLahir" placeholder="kota">
-							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
-							<label for="alamat">Alamat saat ini :</label> 
-							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
-							<label for="noHp">No Hp :</label> 
-							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi">
-							<label for="kost">Kost/Tidak Kost?</label>	<br>			
-							<input type="radio" name="kost" value="kost">Kost <br>
-							<input type="radio" name="kost" value="tidakKost">Tidak Kost
-							<br>
-							<label for="motivasi">Apa motivasi anda masuk BEM Apakah anda hanya ingin masuk BEM saja? Jika tidak, organisasi apa yang telah anda ikuti sekarang :</label>
-							<textarea name="motivasi"></textarea>
-							<label for="pengalaman">Pengalaman apa yang pernah anda lakukan dibidang organisasi?</label>
-							<textarea name="pengalaman"></textarea>
-							<label for="perjanjian">Seandainya anda masuk BEM, bisakah anda berjanji akan tetap berproses dalam organisasi?</label>
-							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
-							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
-						</form>		
-					</p>			
+						<table id="tabel-bem" class="tabel" border="1">
+							<thead>
+								<tr>
+									<td>Nama</td>
+									<td>Tempat Lahir</td>
+									<td>Tanggal Lahir</td>
+									<td>Bulan Lahir</td>
+									<td>Tahun Lahir</td>
+									<td>Alamat</td>
+									<td>Nomor Hp</td>
+									<td>Kost</td>
+									<td>Motivasi</td>
+									<td>Pengalaman</td>
+									<td>Perjanjian</td>
+									<td>Penyakit</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>	
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -299,24 +453,13 @@
 				<span onclick="document.getElementById('himasif').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-himasif')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-himasif')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-himasif')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-himasif')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-himasif')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-himasif" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-himasif')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-himasif')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-himasif')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-himasif')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-himasif')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-himasif')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-himasif" class="city">
@@ -331,6 +474,48 @@
 					<P>
 						<a href="http://himasif.ilkom.unej.ac.id" target="_blank">Visit link</a>
 					</P>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-himasif-profil').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-himasif-profil').style.display='block'">Tambah</button>
+
+						<div id="edit-himasif-profil" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-himasif-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-himasif-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-himasif-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-himasif-profil" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-himasif-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-himasif-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-himasif-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="visi-himasif" class="city" style = "display: none;">
@@ -367,6 +552,48 @@
 						</li>
 					</ol>
 					<br>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-himasif-visi').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-himasif-visi').style.display='block'">Tambah</button>
+
+						<div id="edit-himasif-visi" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-himasif-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-himasif-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-himasif-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-himasif-visi" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-himasif-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-himasif-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-himasif-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="tujuan-himasif" class="city" style = "display: none;">
@@ -376,7 +603,49 @@
 					<br>
 					<p>
 						Tercapainya pendidikan yang kompeten terutama dibidang IPTEK yang didasari tanggungjawab dan sikap profesionalisme serta menyatukan 3 potensi dasar kepemjmpinan pemuda yaitu intelektual, spiritual, dan jasad sehingga menjadi mahasiswa yang bertaqwa kepada Tuhan YME.
-					</p>			
+					</p>		
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-himasif-tujuan').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-himasif-tujuan').style.display='block'">Tambah</button>
+
+						<div id="edit-himasif-tujuan" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-himasif-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-himasif-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-himasif-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-himasif-tujuan" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-himasif-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-himasif-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-himasif-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>		
 				</div>
 
 				<div id="agenda-himasif" class="city" style = "display: none;">
@@ -389,7 +658,7 @@
 					</p>	
 					<br>
 					<p style= "text-align: center;">
-						<iframe src="https://www.youtube.com/embed/XuFgusR5A5c?rel=0" width="80%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+						<iframe src="https://www.youtube.com/embed/XuFgusR5A5c?rel=0" width="90%" height="500px" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 					</p>
 					<br>
 					<p>
@@ -397,9 +666,50 @@
 					</p>
 					<br>
 					<p style= "text-align: center;">
-						<iframe src="https://www.youtube.com/embed/tZGpLX7M7RM?rel=0" width="80%" height="350" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+						<iframe src="https://www.youtube.com/embed/tZGpLX7M7RM?rel=0" width="90%" height="500px" frameborder frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 					</p>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-himasif-agenda').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-himasif-agenda').style.display='block'">Tambah</button>
 
+						<div id="edit-himasif-agenda" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-himasif-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-himasif-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-himasif-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-himasif-agenda" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-himasif-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-himasif-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-himasif-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="pendaftaran-himasif" class="city" style = "display: none;">
@@ -408,33 +718,28 @@
 					</h3>
 					<br>
 					<p>
-						<form name ="pendaftaran-ca-himasif" >
-
-							<label for="nama">Nama : </label>
-							<input type="text" name="nama" placeholder="Nama Lengkap">
-							<label for="tempatLahir">Tempat Lahir :</label>
-							<input type="text" name="tempatLahir" placeholder="kota">
-							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
-							<label for="alamat">Alamat saat ini :</label> 
-							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
-							<label for="noHp">No Hp :</label> 
-							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi">
-							<label for="kost">Kost/Tidak Kost?</label>	<br>			
-							<input type="radio" name="kost" value="kost">Kost <br>
-							<input type="radio" name="kost" value="tidakKost">Tidak Kost
-							<br>
-							<label for="motivasi">Apa motivasi anda masuk HIMASIF Apakah anda hanya ingin masuk HIMASIF saja? Jika tidak, organisasi apa yang telah anda ikuti sekarang :</label>
-							<textarea name="motivasi"></textarea>
-							<label for="pengalaman">Pengalaman apa yang pernah anda lakukan dibidang organisasi?</label>
-							<textarea name="pengalaman"></textarea>
-							<label for="perjanjian">Seandainya anda masuk HIMASIF, bisakah anda berjanji akan tetap berproses dalam organisasi?</label>
-							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
-							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
-						</form>		
-					</p>			
+						<table id="tabel-himasif" class="tabel" border="1">
+							<thead>
+								<tr>
+									<td>Nama</td>
+									<td>Tempat Lahir</td>
+									<td>Tanggal Lahir</td>
+									<td>Bulan Lahir</td>
+									<td>Tahun Lahir</td>
+									<td>Alamat</td>
+									<td>Nomor Hp</td>
+									<td>Kost</td>
+									<td>Motivasi</td>
+									<td>Pengalaman</td>
+									<td>Perjanjian</td>
+									<td>Penyakit</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>		
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -444,24 +749,13 @@
 				<span onclick="document.getElementById('binary').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-binary')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-binary')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-binary')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-binary')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-binary')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-binary" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-binary')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-binary')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-binary')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-binary')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-binary')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-binary')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-binary" class="city">
@@ -540,6 +834,50 @@
 					<P>
 						<a href="http://binaryupdate.org" target="_blank">Visit link</a>
 					</P>
+
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-binary-profil').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-binary-profil').style.display='block'">Tambah</button>
+
+						<div id="edit-binary-profil" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-binary-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-binary-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-binary-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-binary-profil" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-binary-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-binary-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-binary-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="visi-binary" class="city" style = "display: none;">
@@ -567,6 +905,49 @@
 						</li>					
 					</ol>
 					<br>
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-binary-visi').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-binary-visi').style.display='block'">Tambah</button>
+
+						<div id="edit-binary-visi" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-binary-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-binary-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-binary-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-binary-visi" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-binary-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-binary-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-binary-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="tujuan-binary" class="city" style = "display: none;">
@@ -577,6 +958,50 @@
 					<p>
 						Mewujudkan budaya demokratis mahasiswa di lingkungan sosial dan kampus
 					</p>			
+
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-binary-tujuan').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-binary-tujuan').style.display='block'">Tambah</button>
+
+						<div id="edit-binary-tujuan" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-binary-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-binary-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-binary-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-binary-tujuan" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-binary-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-binary-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-binary-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="agenda-binary" class="city" style = "display: none;">
@@ -587,6 +1012,49 @@
 					<p>
 
 					</p>			
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-binary-agenda').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-binary-agenda').style.display='block'">Tambah</button>
+
+						<div id="edit-binary-agenda" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-binary-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-binary-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-binary-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-binary-agenda" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-binary-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-binary-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-binary-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="pendaftaran-binary" class="city" style = "display: none;">
@@ -595,33 +1063,28 @@
 					</h3>
 					<br>
 					<p>
-						<form name ="pendaftaran-ca-binary" >
-
-							<label for="nama">Nama : </label>
-							<input type="text" name="nama" placeholder="Nama Lengkap">
-							<label for="tempatLahir">Tempat Lahir :</label>
-							<input type="text" name="tempatLahir" placeholder="kota">
-							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
-							<label for="alamat">Alamat saat ini :</label> 
-							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
-							<label for="noHp">No Hp :</label> 
-							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi">
-							<label for="kost">Kost/Tidak Kost?</label>	<br>			
-							<input type="radio" name="kost" value="kost">Kost <br>
-							<input type="radio" name="kost" value="tidakKost">Tidak Kost
-							<br>
-							<label for="motivasi">Apa motivasi anda masuk UKM-P BINARY Apakah anda hanya ingin masuk UKM-P BINARY saja? Jika tidak, organisasi apa yang telah anda ikuti sekarang :</label>
-							<textarea name="motivasi"></textarea>
-							<label for="pengalaman">Pengalaman apa yang pernah anda lakukan dibidang organisasi dan bidang jurnalis?</label>
-							<textarea name="pengalaman"></textarea>
-							<label for="perjanjian">Seandainya anda masuk UKM-P BINARY, bisakah anda berjanji akan tetap berproses dalam organisasi dan bidang jurnalis?</label>
-							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
-							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
-						</form>		
-					</p>			
+						<table id="tabel-binary" class="tabel" border="1">
+							<thead>
+								<tr>
+									<td>Nama</td>
+									<td>Tempat Lahir</td>
+									<td>Tanggal Lahir</td>
+									<td>Bulan Lahir</td>
+									<td>Tahun Lahir</td>
+									<td>Alamat</td>
+									<td>Nomor Hp</td>
+									<td>Kost</td>
+									<td>Motivasi</td>
+									<td>Pengalaman</td>
+									<td>Perjanjian</td>
+									<td>Penyakit</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>			
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -631,24 +1094,13 @@
 				<span onclick="document.getElementById('laos').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-laos')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-laos')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-laos')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-laos')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-laos')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-laos" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-laos')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-laos')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-laos')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-laos')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-laos')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-laos')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-laos" class="city">
@@ -670,6 +1122,49 @@
 					<P>
 						<a href="http://laos.ilkom.unej.ac.id" target="_blank">Visit link</a>
 					</P>
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-laos-profil').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-laos-profil').style.display='block'">Tambah</button>
+
+						<div id="edit-laos-profil" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-laos-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-laos-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-laos-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-laos-profil" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-laos-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-laos-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-laos-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="visi-laos" class="city" style = "display: none;">
@@ -706,6 +1201,49 @@
 						</li>
 					</ol>
 					<br>
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-laos-visi').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-laos-visi').style.display='block'">Tambah</button>
+
+						<div id="edit-laos-visi" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-laos-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-laos-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-laos-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-laos-visi" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-laos-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-laos-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-laos-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="tujuan-laos" class="city" style = "display: none;">
@@ -716,6 +1254,49 @@
 					<p>
 						mewadahi mahasiswa fasilkom yang tertarim kepada dunia sistem operasi open source terutama linux
 					</p>			
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-laos-tujuan').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-laos-tujuan').style.display='block'">Tambah</button>
+
+						<div id="edit-laos-tujuan" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-laos-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-laos-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-laos-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-laos-tujuan" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-laos-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-laos-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-laos-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="agenda-laos" class="city" style = "display: none;">
@@ -724,8 +1305,51 @@
 					</h3>
 					<br>
 					<p>
-						
+
 					</p>			
+
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-laos-agenda').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-laos-agenda').style.display='block'">Tambah</button>
+
+						<div id="edit-laos-agenda" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-laos-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-laos-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-laos-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-laos-agenda" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-laos-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-laos-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-laos-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="pendaftaran-laos" class="city" style = "display: none;">
@@ -734,33 +1358,28 @@
 					</h3>
 					<br>
 					<p>
-						<form name ="pendaftaran-ca-laos" >
-
-							<label for="nama">Nama : </label>
-							<input type="text" name="nama" placeholder="Nama Lengkap">
-							<label for="tempatLahir">Tempat Lahir :</label>
-							<input type="text" name="tempatLahir" placeholder="kota">
-							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
-							<label for="alamat">Alamat saat ini :</label> 
-							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
-							<label for="noHp">No Hp :</label> 
-							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi">
-							<label for="kost">Kost/Tidak Kost?</label>	<br>			
-							<input type="radio" name="kost" value="kost">Kost <br>
-							<input type="radio" name="kost" value="tidakKost">Tidak Kost
-							<br>
-							<label for="motivasi">Apa motivasi anda masuk UKM LAOS Apakah anda hanya ingin masuk UKM LAOS saja? Jika tidak, organisasi apa yang telah anda ikuti sekarang :</label>
-							<textarea name="motivasi"></textarea>
-							<label for="pengalaman">Pengalaman apa yang pernah anda lakukan dibidang organisasibidang pemrograman linux?</label>
-							<textarea name="pengalaman"></textarea>
-							<label for="perjanjian">Seandainya anda masuk UKM LAOS, bisakah anda berjanji akan tetap berproses dalam organisasi dan bidang pemrograman linux?</label>
-							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
-							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
-						</form>		
-					</p>			
+						<table id="tabel-laos" class="tabel" border="1">
+							<thead>
+								<tr>
+									<td>Nama</td>
+									<td>Tempat Lahir</td>
+									<td>Tanggal Lahir</td>
+									<td>Bulan Lahir</td>
+									<td>Tahun Lahir</td>
+									<td>Alamat</td>
+									<td>Nomor Hp</td>
+									<td>Kost</td>
+									<td>Motivasi</td>
+									<td>Pengalaman</td>
+									<td>Perjanjian</td>
+									<td>Penyakit</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>		
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -770,24 +1389,13 @@
 				<span onclick="document.getElementById('macho').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-macho')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-macho')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-macho')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-macho')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-macho')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-macho" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-macho')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-macho')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-macho')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-macho')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-macho')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-macho')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-macho" class="city">
@@ -804,6 +1412,48 @@
 						Tahun-tahun selanjutnya cabor UKM-O nambah terus dan sampai sekarang ada 6 cabor (Futsal, basket, badminton, tenis meja, voli, sepakbola) tapi untuk tahun ini sepak bola masih fakum. 
 						Nama UKM-O MACO diresmikan pada tanggal 22 april 2016 pada saat kepengurusan Bagus Akbar . Macho singkatan dari men sana in corpore sano yang artinya di dalam tubuh yg kuat terdapat jiwa yg sehat.
 					</P>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-macho-profil').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-macho-profil').style.display='block'">Tambah</button>
+
+						<div id="edit-macho-profil" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-macho-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-macho-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-macho-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-macho-profil" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-macho-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-macho-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-macho-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="visi-macho" class="city" style = "display: none;">
@@ -840,6 +1490,48 @@
 						</li>
 					</ol>
 					<br>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-macho-visi').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-macho-visi').style.display='block'">Tambah</button>
+
+						<div id="edit-macho-visi" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-macho-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-macho-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-macho-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-macho-visi" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-macho-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-macho-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-macho-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="tujuan-macho" class="city" style = "display: none;">
@@ -849,7 +1541,49 @@
 					<br>
 					<p>
 						Mewadahi mahasiswa yang gemar dalam bidang olahraga
-					</p>			
+					</p>		
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-macho-tujuan').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-macho-tujuan').style.display='block'">Tambah</button>
+
+						<div id="edit-macho-tujuan" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-macho-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-macho-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-macho-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-macho-tujuan" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-macho-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-macho-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-macho-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>		
 				</div>
 
 				<div id="agenda-macho" class="city" style = "display: none;">
@@ -858,8 +1592,50 @@
 					</h3>
 					<br>
 					<p>
-						
+
 					</p>			
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-macho-agenda').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-macho-agenda').style.display='block'">Tambah</button>
+
+						<div id="edit-macho-agenda" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-macho-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-macho-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-macho-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-macho-agenda" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-macho-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-macho-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-macho-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="pendaftaran-macho" class="city" style = "display: none;">
@@ -868,33 +1644,28 @@
 					</h3>
 					<br>
 					<p>
-						<form name ="pendaftaran-ca-macho" >
-
-							<label for="nama">Nama : </label>
-							<input type="text" name="nama" placeholder="Nama Lengkap">
-							<label for="tempatLahir">Tempat Lahir :</label>
-							<input type="text" name="tempatLahir" placeholder="kota">
-							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
-							<label for="alamat">Alamat saat ini :</label> 
-							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
-							<label for="noHp">No Hp :</label> 
-							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi">
-							<label for="kost">Kost/Tidak Kost?</label>	<br>			
-							<input type="radio" name="kost" value="kost">Kost <br>
-							<input type="radio" name="kost" value="tidakKost">Tidak Kost
-							<br>
-							<label for="motivasi">Apa motivasi anda masuk UKM-O MACHO Apakah anda hanya ingin masuk UKM-O MACHO saja? Jika tidak, organisasi apa yang telah anda ikuti sekarang :</label>
-							<textarea name="motivasi"></textarea>
-							<label for="pengalaman">Pengalaman apa yang pernah anda lakukan dibidang organisasi dan bidang olahraga?</label>
-							<textarea name="pengalaman"></textarea>
-							<label for="perjanjian">Seandainya anda masuk UKM-O MACHO, bisakah anda berjanji akan tetap berproses dalam organisasi dan bidang olahraga?</label>
-							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
-							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
-						</form>		
-					</p>			
+						<table id="tabel-macho" class="tabel" border="1">
+							<thead>
+								<tr>
+									<td>Nama</td>
+									<td>Tempat Lahir</td>
+									<td>Tanggal Lahir</td>
+									<td>Bulan Lahir</td>
+									<td>Tahun Lahir</td>
+									<td>Alamat</td>
+									<td>Nomor Hp</td>
+									<td>Kost</td>
+									<td>Motivasi</td>
+									<td>Pengalaman</td>
+									<td>Perjanjian</td>
+									<td>Penyakit</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>		
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -904,24 +1675,13 @@
 				<span onclick="document.getElementById('etalase').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-etalase')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-etalase')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-etalase')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-etalase')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-etalase')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-etalase" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-etalase')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-etalase')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-etalase')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-etalase')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-etalase')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-etalase')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-etalase" class="city">
@@ -937,6 +1697,48 @@
 						UKM – K ETALASE pada awalnya menaungi 4 bidang kesenian, yaitu Musik, PSM, Tari dan Fotografi. Kemudian, pada periode kepengurusan 2015 – 2016, 
 						bidang Teater mengisi sebagai bidang baru di UKM – K ETALASE. Dengan adanya bidang – bidang yang dinaungi UKM – K ETALASE, Anggota UKM – K ETALASE telah berhasil melaksanakan pementasan diantaranya Aplikasi untuk Anggota Muda dan Eksen (Pekan Seni) yang merupakan wadah proses seluruh anggota UKM – K ETALASE.
 					</P>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-etalase-profil').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-etalase-profil').style.display='block'">Tambah</button>
+
+						<div id="edit-etalase-profil" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-etalase-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-etalase-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-etalase-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-etalase-profil" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-etalase-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-etalase-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-etalase-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="visi-etalase" class="city" style = "display: none;">
@@ -973,6 +1775,48 @@
 						</li>
 					</ol>
 					<br>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-etalase-visi').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-etalase-visi').style.display='block'">Tambah</button>
+
+						<div id="edit-etalase-visi" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-etalase-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-etalase-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-etalase-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-etalase-visi" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-etalase-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-etalase-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-etalase-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="tujuan-etalase" class="city" style = "display: none;">
@@ -982,7 +1826,49 @@
 					<br>
 					<p>
 						mengembangkan bakat dan minat kesenian dan organisasi untuk mejadi manusia yang aktif, peduli setta menjunjung tinggi nilai – nilai budaya yang terus berkembang dengan etika dan sudut pandang yang positif dan luas.
-					</p>			
+					</p>	
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-etalase-tujuan').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-etalase-tujuan').style.display='block'">Tambah</button>
+
+						<div id="edit-etalase-tujuan" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-etalase-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-etalase-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-etalase-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-etalase-tujuan" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-etalase-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-etalase-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-etalase-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>			
 				</div>
 
 				<div id="agenda-etalase" class="city" style = "display: none;">
@@ -991,8 +1877,50 @@
 					</h3>
 					<br>
 					<p>
-						
-					</p>			
+
+					</p>		
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-etalase-agenda').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-etalase-agenda').style.display='block'">Tambah</button>
+
+						<div id="edit-etalase-agenda" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-etalase-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-etalase-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-etalase-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-etalase-agenda" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-etalase-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-etalase-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-etalase-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>		
 				</div>
 
 				<div id="pendaftaran-etalase" class="city" style = "display: none;">
@@ -1001,40 +1929,29 @@
 					</h3>
 					<br>
 					<p>
-						<form name ="pendaftaran-ca-etalase" >
-
-							<label for="nama">Nama : </label>
-							<input type="text" name="nama" placeholder="Nama Lengkap">
-							<label for="tempatLahir">Tempat Lahir :</label>
-							<input type="text" name="tempatLahir" placeholder="kota">
-							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
-							<label for="alamat">Alamat saat ini :</label> 
-							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
-							<label for="noHp">No Hp :</label> 
-							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi">
-							<label for="kost">Kost/Tidak Kost?</label>	<br>			
-							<input type="radio" name="kost" value="kost">Kost <br>
-							<input type="radio" name="kost" value="tidakKost">Tidak Kost
-							<br>
-							<label for="bidang">Bidang : </label> <br>
-							<input type="checkbox" name="bidang" value="PSM">PSM <br>
-							<input type="checkbox" name="bidang" value="Musik">Musik <br>
-							<input type="checkbox" name="bidang" value="Tari">Tari <br>
-							<input type="checkbox" name="bidang" value="Fotografi">Fotografi <br>
-							<input type="checkbox" name="bidang" value="Teater">Teater
-							<br>
-							<label for="motivasi">Apa motivasi anda masuk UKMK ETALASE Apakah anda hanya ingin masuk UKMK ETALASE saja? Jika tidak, organisasi apa yang telah anda ikuti sekarang :</label>
-							<textarea name="motivasi"></textarea>
-							<label for="pengalaman">Pengalaman apa yang pernah anda lakukan dibidang organisasi maupun bidang kesenian?</label>
-							<textarea name="pengalaman"></textarea>
-							<label for="perjanjian">Seandainya anda masuk UKMK ETALASE, bisakah anda berjanji akan tetap berproses dalam organisasi & kesenian?</label>
-							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
-							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
-						</form>		
-					</p>			
+						<table id="tabel-etalase" class="tabel" border="1">
+							<thead>
+								<tr>
+									<td>Nama</td>
+									<td>Tempat Lahir</td>
+									<td>Tanggal Lahir</td>
+									<td>Bulan Lahir</td>
+									<td>Tahun Lahir</td>
+									<td>Alamat</td>
+									<td>Nomor Hp</td>
+									<td>Kost</td>
+									<td>Bidang</td>
+									<td>Motivasi</td>
+									<td>Pengalaman</td>
+									<td>Perjanjian</td>
+									<td>Penyakit</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>		
+					</p>
 				</div>
 			</div>		
 		</div>
@@ -1044,24 +1961,13 @@
 				<span onclick="document.getElementById('balwana').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
 			<div class="ormawa-container">
-				<div class="nav_bar">
-					<ul>
-						<li>
-							<span onclick="openCity('profil-balwana')">Profil</span>
-						</li>
-						<li>
-							<span onclick="openCity('visi-balwana')">Visi & Misi</span>
-						</li>
-						<li>
-							<span onclick="openCity('tujuan-balwana')">Tujuan</span>
-						</li>
-						<li>
-							<span onclick="openCity('agenda-balwana')">Agenda</span>
-						</li>
-						<li>
-							<span onclick="openCity('pendaftaran-balwana')">Form Pendaftaran</span>
-						</li>						
-					</ul>
+				<div id="menu-balwana" class="topnav">
+					<a href="#menu" class="icon" onclick="menu('menu-balwana')">Menu</a>
+					<a href="#profil" onclick="openCity('profil-balwana')">Profil</a>
+					<a href="#visi-misi" onclick="openCity('visi-balwana')">Visi & Misi</a>
+					<a href="#tujuan" onclick="openCity('tujuan-balwana')">Tujuan</a>
+					<a href="#agenda" onclick="openCity('agenda-balwana')">Agenda</a>
+					<a href="#form-pendaftaran" onclick="openCity('pendaftaran-balwana')">Form Pendaftaran</a>
 				</div>
 
 				<div id="profil-balwana" class="city">
@@ -1072,6 +1978,48 @@
 					<p>
 						UKM BALWANA merupakan Unit Kegiatan Mahasiswa dalam bidang pecinta alam
 					</p>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-balwana-profil').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-balwana-profil').style.display='block'">Tambah</button>
+
+						<div id="edit-balwana-profil" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-balwana-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-balwana-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-balwana-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-balwana-profil" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-balwana-profil')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-balwana-profil').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-balwana-profil');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="visi-balwana" class="city" style = "display: none;">
@@ -1101,6 +2049,48 @@
 							Menjunjung tinggi loyalitas terhadap organisasi.
 						</li>					
 					</ol>
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-balwana-visi').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-balwana-visi').style.display='block'">Tambah</button>
+
+						<div id="edit-balwana-visi" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-balwana-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-balwana-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-balwana-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-balwana-visi" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-balwana-visi')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-balwana-visi').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-balwana-visi');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>	
 				</div>
 
 				<div id="tujuan-balwana" class="city" style = "display: none;">
@@ -1110,7 +2100,49 @@
 					<br>
 					<p>
 						Menjaga kelestarian lingkungan sekitar
-					</p>			
+					</p>	
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-balwana-tujuan').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-balwana-tujuan').style.display='block'">Tambah</button>
+
+						<div id="edit-balwana-tujuan" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-balwana-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-balwana-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-balwana-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-balwana-tujuan" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-balwana-tujuan')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-balwana-tujuan').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-balwana-tujuan');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>			
 				</div>
 
 				<div id="agenda-balwana" class="city" style = "display: none;">
@@ -1119,8 +2151,50 @@
 					</h3>
 					<br>
 					<p>
-						
-					</p>			
+
+					</p>		
+					<div class="setting">
+						<button type="button" onclick="document.getElementById('edit-balwana-agenda').style.display='block'">Edit</button>
+						<button type="button" onclick="document.getElementById('tambah-balwana-agenda').style.display='block'">Tambah</button>
+
+						<div id="edit-balwana-agenda" class="edit animate">
+							<h2>EDIT</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('edit-balwana-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('edit-balwana-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('edit-balwana-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+
+						<div id="tambah-balwana-agenda" class="edit animate">
+							<h2>TAMBAH</h2>
+							<textarea placeholder="Tulis sesuatu disini"></textarea>						
+							<button type="button" onclick="simpan('tambah-balwana-agenda')">Simpan</button>
+							<button type="reset" onclick="document.getElementById('tambah-balwana-agenda').style.display='none'">Batal</button>
+							<script type="text/javascript">
+
+								// Get the modal
+								var close = document.getElementById('tambah-balwana-agenda');
+
+								// When the user clicks anywhere outside of the modal, close it
+								window.onclick = function(event) {
+									if (event.target == close) {
+										close.style.display = "none";
+									}
+								}
+							</script>
+						</div>
+					</div>		
 				</div>
 
 				<div id="pendaftaran-balwana" class="city" style = "display: none;">
@@ -1129,35 +2203,30 @@
 					</h3>
 					<br>
 					<p>
-						<form name ="pendaftaran-ca-balwana" >
-
-							<label for="nama">Nama : </label>
-							<input type="text" name="nama" placeholder="Nama Lengkap">
-							<label for="tempatLahir">Tempat Lahir :</label>
-							<input type="text" name="tempatLahir" placeholder="kota">
-							<label for="tanggalLahir">Tanggal Lahir :</label> <br>
-							<input type="date" name="tanggalLahir"> <br>
-							<label for="alamat">Alamat saat ini :</label> 
-							<textarea placeholder="tempat tinggal sekarang"name="alamat"></textarea>
-							<label for="noHp">No Hp :</label> 
-							<input type="number" name="noHp" placeholder="nomor yang dapat dihubungi">
-							<label for="kost">Kost/Tidak Kost?</label>	<br>			
-							<input type="radio" name="kost" value="kost">Kost <br>
-							<input type="radio" name="kost" value="tidakKost">Tidak Kost
-							<br>
-							<label for="motivasi">Apa motivasi anda masuk UKM BALWANA Apakah anda hanya ingin masuk UKM BALWANA saja? Jika tidak, organisasi apa yang telah anda ikuti sekarang :</label>
-							<textarea name="motivasi"></textarea>
-							<label for="pengalaman">Pengalaman apa yang pernah anda lakukan dibidang organisasi dan bidang pecinta alam?</label>
-							<textarea name="pengalaman"></textarea>
-							<label for="perjanjian">Seandainya anda masuk UKM BALWANA, bisakah anda berjanji akan tetap berproses dalam organisasi dan bidang pecinta alam</label>
-							<textarea name="perjanjian"></textarea>
-							<label for="penyakit">penyakit apa saja yang pernah anda derita?</label>
-							<textarea name="penyakit"></textarea>
-							<button type="submit" onclick="alert('DATA BERHASIL DISIMPAN')">SIMPAN</button>
-						</form>		
-					</p>			
-				</div>
-			</div>		
+						<table id="tabel-balwana" class="tabel" border="1">
+							<thead>
+								<tr>
+									<td>Nama</td>
+									<td>Tempat Lahir</td>
+									<td>Tanggal Lahir</td>
+									<td>Bulan Lahir</td>
+									<td>Tahun Lahir</td>
+									<td>Alamat</td>
+									<td>Nomor Hp</td>
+									<td>Kost</td>
+									<td>Motivasi</td>
+									<td>Pengalaman</td>
+									<td>Perjanjian</td>
+									<td>Penyakit</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>			
+					</p>
+				</div>		
+			</div>			
 		</div>
 
 		<script>
@@ -1168,6 +2237,30 @@
 					x[i].style.display = "none";  
 				}
 				document.getElementById(cityName).style.display = "block";  
+			}
+
+			function menu(namaMenu) {
+				var x = document.getElementById(namaMenu);
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+
+			function daftar(form){
+				if (form.nama.value == "" || form.tempatLahir.value == "" || form.tanggalLahir.value == "" || form.bulanLahir.value == "" || form.tahunlLahir.value == "" || form.kost.value == "" || form.alamat.value == "" || form.noHp.value == "" || form.motivasi.value == "" || form.pengalaman.value == "" || form.perjanjian.value == "" || form.penyakit.value == "") {
+					alert("Formulir harus terisi dengan lengkap");
+				} else {
+					alert("Data Berhasil Disimpan");
+				}
+			}
+
+
+			function simpan(data){
+				alert("DATA BERHASIL DISMPAN");
+				var close = document.getElementById(data);
+				close.style.display='none';
 			}
 		</script>
 	</section>

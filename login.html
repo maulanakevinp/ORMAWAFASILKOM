@@ -20,19 +20,19 @@
 
 		<div id="id01" class="modal">
 
-			<form class="modal-content animate" action="admin.html">
+			<form class="modal-content animate" name="login">
 				<div class="imgcontainer">
 					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 				</div>
 
 				<div class="container">
 					<label for="name"><b>Username</b></label>
-					<input type="text" placeholder="Enter Username" name="name" required>
+					<input type="text" placeholder="Enter Username" name="user" required>
 
 					<label for="pass"><b>Password</b></label>
 					<input type="password" placeholder="Enter Password" name="pass" required>
 
-					<button type="submit" onclick="login()">Login</button>
+					<button type="submit" onclick="check(this.form)">Login</button>	
 				</div>
 			</form>
 		</div>
@@ -47,14 +47,13 @@
 					modal.style.display = "none";
 				}
 			}
-			function login(){
-				var name = (document.masuk.user.value);
-				var pass = (document.masuk.pass.value);
 
-				if (name == "admin" && pass == "admin1234") {
-					alert("selamat datang");				
+			function check(form){
+				if (form.user.value == "admin" && form.pass.value == "admin1234") {
+					window.open('admin.html');
+					alert("SELAMAT DATANG");				
 				} else {
-					alert("gagal masuk");
+					alert("USERNAME ATAU PASSWORD SALAH");
 				}
 			}
 		</script>
